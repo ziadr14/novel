@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background:linear-gradient(#200016,#10001f);
+    height: 100vh;
+    font-family: system-ui;
+}
+
+a {
+    color: #fff;
+}
+
+nav {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px  ;
+}
+
+nav .logo {
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+nav .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .links li {
+    margin-right: 30px;
+    text-transform: uppercase;
+}
+
+nav .links a {
+    padding: 6px 15px;
+    transition: 0.4s;
+    border-radius: 20px;
+}
+
+nav .links li a:hover,.act{
+    background-color: #fff;
+    color: #10001f;
+}
+
+.menue {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menue .line {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px;
+}
+
+
+
+
+.main {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.main::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background: linear-gradient( to top ,#200016 , transparent);
+}
+
+.main img {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+#moon {
+    mix-blend-mode: screen;
+    transform: translateY(80px);
+}
+
+.nouvil {
+    color: #ffff;
+    text-transform: uppercase;
+    font-size: 25px;
+    transform: translateY(-140px);
+}
+
+.contant {
+    color: #fff;
+    padding: 30px;
+}
+
+.contant h2 {
+    margin: 20px;
+    font-size: 30px;
+}
+
+.contant p {
+    margin: 20px;
+}
+@media (max-width: 768px) {
+    nav .links {
+        display: none;
+    }
+    
+    nav .menue {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    nav .logo {
+        font-size: 24px;
+    }
+
+    .main img {
+        object-fit: contain;
+    }
+
+    .nouvi {
+        font-size: 20px;
+    }
+
+    .contant h2 {
+        font-size: 24px;
+    }
+}
